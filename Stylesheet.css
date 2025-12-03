@@ -1,0 +1,125 @@
+/* ---------- GLOBAL COLORS ---------- */
+:root {
+    --primary: #4C3BCF;
+    --primary-light: #7C6FF6;
+    --primary-dark: #3A2BA8;
+    --gold: #F5B82E;
+    --lavender-bg: #EDE7FF;
+    --light-bg: #F8F9FB;
+    --white: #FFFFFF;
+    --dark: #1F1F1F;
+    --gray: #4A4A4A;
+}
+
+/* ---------- SMOOTH ANIMATIONS ---------- */
+* {
+    transition: 0.2s ease;
+}
+
+/* ---------- BODY BACKGROUND ---------- */
+body {
+    background: linear-gradient(to bottom right, #F8F9FB, #EDE7FF);
+    color: var(--gray);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2, h3 {
+    color: var(--dark);
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(76, 59, 207, 0.2);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: linear-gradient(to right, var(--primary), var(--primary-light)) !important;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: var(--white) !important;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+    transform: translateY(-2px);
+}
+
+/* ---------- PROFILE BUTTON ---------- */
+#profileBtn {
+    background: var(--gold);
+    border: none;
+    color: var(--dark);
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(245, 184, 46, 0.4);
+}
+
+#profileBtn:hover {
+    background-color: #e3a628;
+    transform: scale(1.05);
+}
+
+/* ---------- PRIMARY BUTTONS ---------- */
+.btn-primary {
+    background: var(--primary) !important;
+    border: none !important;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark) !important;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    background-color: transparent;
+    border-spacing: 20px;
+}
+
+table td {
+    background: var(--lavender-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+table td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- POPUP OVERLAY (FIXED) ---------- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-overlay.d-flex {
+    display: flex !important;
+}
+
+/* ---------- POPUP BOX ---------- */
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid var(--primary);
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    animation: popupZoom 0.3s ease-out;
+}
+
+@keyframes popupZoom {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
